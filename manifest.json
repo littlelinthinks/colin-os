@@ -1,0 +1,33 @@
+{
+  "name": "Colin OS",
+  "short_name": "Colin OS",
+  "description": "15 分钟微学习 · 35 本精选图书速读 · 200 跨学科思维模型 · 186 领袖原则 · 间隔重复每日闪卡",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B0B0F",
+  "theme_color": "#0B0B0F",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "categories": ["books", "education", "productivity"],
+  "icons": [
+    { "src": "/colin-os/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/colin-os/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/colin-os/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "每日闪卡",
+      "short_name": "闪卡",
+      "url": "/?tab=cards",
+      "icons": [{ "src": "/colin-os/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "思维诊所",
+      "short_name": "诊所",
+      "url": "/?tab=clinic",
+      "icons": [{ "src": "/colin-os/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

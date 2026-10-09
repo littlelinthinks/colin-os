@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Colin OS · 15 分钟微学习</title>
+<meta name="description" content="Colin OS — 35 本精选图书 15 分钟速读 · 200 跨学科思维模型 · 186 领袖原则间隔重复闪卡。像原生 App 一样的微学习体验。">
+<!-- PWA -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0B0B0F">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Colin OS">
+<link rel="apple-touch-icon" href="/colin-os/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/colin-os/icons/favicon-32.png">
+<link rel="stylesheet" href="/colin-os/styles.css">
+<style>
+  /* 首屏加载态（数据到达前） */
+  .boot { text-align: center; padding: 90px 20px 0; color: var(--muted-2); font-size: 13px; letter-spacing: .2em; }
+  .boot .ring { width: 44px; height: 44px; margin: 0 auto 18px; border-radius: 50%;
+    border: 2.5px solid var(--gold-line); border-top-color: var(--gold);
+    animation: spin 0.9s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="os-shell">
+
+  <!-- 添加到主屏幕引导条 -->
+  <div class="install-bar" id="install-bar" role="dialog" aria-label="添加到主屏幕"></div>
+
+  <!-- 顶部品牌 Header -->
+  <header class="os-header" id="os-header">
+    <div class="os-brand">
+      <img src="/colin-os/icons/icon-192.png" alt="Colin OS">
+      <div class="bt"><b>COLIN OS</b><em>15-MIN WISDOM</em></div>
+    </div>
+  </header>
+
+  <!-- 离线徽标 -->
+  <div class="offline-pill" id="offline-pill">离线模式 · 已缓存内容可正常使用</div>
+
+  <!-- 主视图：四大 TabPane -->
+  <main class="os-view">
+    <section class="tabpane" id="pane-library">
+      <div class="boot"><div class="ring"></div>LOADING COLIN OS</div>
+    </section>
+    <section class="tabpane" id="pane-clinic" hidden></section>
+    <section class="tabpane" id="pane-cards" hidden></section>
+    <section class="tabpane" id="pane-os" hidden></section>
+  </main>
+
+  <!-- 详情弹层 -->
+  <div class="sheet-mask" id="sheet-mask"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true">
+    <div class="grab"></div>
+    <button class="sclose" aria-label="关闭">×</button>
+    <div class="sheet-body" id="sheet-body"></div>
+  </div>
+
+  <!-- 悬浮音频播放器（TTS 边听边读） -->
+  <div class="audio-bar closed" id="audio-bar"></div>
+
+  <!-- 底部 4 大 TabBar -->
+  <nav class="tabbar" id="tabbar" aria-label="主导航"></nav>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="/components/widgets/mental-model-latticework.js" defer></script>
+<script src="/colin-os/app.js" defer></script>
+</body>
+</html>
