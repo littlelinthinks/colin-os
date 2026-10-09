@@ -1,5 +1,5 @@
 /* Colin OS Service Worker — 离线缓存：App 外壳 / 数据 JSON / 组件 / 卡片 UI */
-const VERSION = "colin-os-v2";
+const VERSION = "colin-os-v3";
 const CORE = [
   "/",
   "/index.html",

@@ -65,8 +65,111 @@
     lock: svg('<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>'),
     right: svg('<path d="m9 6 6 6-6 6"/>'),
     bolt: svg('<path d="M13 2 4 14h6l-1 8 9-12h-6z"/>'),
-    ear: svg('<path d="M4 12a8 8 0 1 1 16 0c0 4-2.5 5-4 7-1 1.3-1.5 3-3.5 3"/><circle cx="12" cy="12" r="3"/>')
+    ear: svg('<path d="M4 12a8 8 0 1 1 16 0c0 4-2.5 5-4 7-1 1.3-1.5 3-3.5 3"/><circle cx="12" cy="12" r="3"/>'),
+    sun: svg('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'),
+    moon: svg('<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="var(--accent-gold)" stroke="none"/>')
   };
+
+  /* ================= 主题管理（☀️/🌙） ================= */
+  function applyTheme(theme) {
+    document.documentElement.classList.remove("dark-theme", "light-theme");
+    document.documentElement.classList.add(theme === "dark" ? "dark-theme" : "light-theme");
+    try { localStorage.setItem("colinOS_theme", theme); } catch (e) {}
+  }
+  function toggleTheme() {
+    var isDark = document.documentElement.classList.contains("dark-theme");
+    applyTheme(isDark ? "light" : "dark");
+  }
+
+  /* ================= Confetti 打卡特效 ================= */
+  function confettiBurst() {
+    var c = document.createElement("canvas");
+    c.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:700";
+    document.body.appendChild(c);
+    var ctx = c.getContext("2d");
+    var W = c.width = window.innerWidth, H = c.height = window.innerHeight;
+    var colors = ["#C5A059", "#D8B977", "#1F2937", "#6B7280", "#ffffff"];
+    var ps = [];
+    for (var i = 0; i < 130; i++) {
+      ps.push({
+        x: W / 2, y: H * 0.42,
+        vx: (Math.random() - 0.5) * 13, vy: Math.random() * -13 - 4,
+        g: 0.28 + Math.random() * 0.22, s: 4 + Math.random() * 6,
+        c: colors[i % colors.length], r: Math.random() * 6
+      });
+    }
+    var t0 = Date.now();
+    (function loop() {
+      var t = Date.now() - t0;
+      ctx.clearRect(0, 0, W, H);
+      var alive = false;
+      ps.forEach(function (p) {
+        p.vy += p.g; p.x += p.vx; p.y += p.vy; p.r -= 0.02;
+        if (p.r > 0.4) { ctx.fillStyle = p.c; ctx.beginPath(); ctx.arc(p.x, p.y, Math.max(p.r, 0.5), 0, 7); ctx.fill(); }
+        if (p.y < H + 30) alive = true;
+      });
+      if (t < 1500 && alive) requestAnimationFrame(loop); else c.remove();
+    })();
+  }
+
+  /* ================= 每日打卡（Streak） ================= */
+  /* 同一天只 +1，卡片完成 / 微行动全完成 均触发 */
+  function dayCheckIn() {
+    var st = LSget("colinOS_streak", { count: 0, last: null });
+    var t = todayStr();
+    if (st.last !== t) {
+      var y = addDaysStr(-1);
+      st.count = (st.last === y) ? (st.count || 0) + 1 : 1;
+      st.last = t;
+      LSset("colinOS_streak", st);
+      refreshStreakMini();
+      toast("打卡成功 · 已连续 " + st.count + " 天");
+    }
+  }
+
+  /* ================= 模块：Atoms 微行动（Wiser → 2 分钟微行动） ================= */
+  var Atoms = (function () {
+    function load() { return LSget("colin_todays_actions", { date: todayStr(), items: [] }); }
+    function save(a) { LSset("colin_todays_actions", a); }
+    function ensureFresh() {
+      var a = load();
+      if (a.date !== todayStr()) { a = { date: todayStr(), items: [] }; save(a); }
+      return a;
+    }
+    function idOf(title, steps) { return "act-" + hashStr(title + "|" + (steps || []).join("|")); }
+
+    function toggle(title, steps) {
+      steps = steps || [];
+      var id = idOf(title, steps);
+      var a = ensureFresh();
+      var existing = a.items.filter(function (it) { return it.id === id; })[0];
+      var claimed;
+      if (existing) { a.items = a.items.filter(function (it) { return it.id !== id; }); claimed = false; }
+      else { a.items.push({ id: id, title: title, steps: steps, done: false }); claimed = true; }
+      save(a);
+      window.dispatchEvent(new CustomEvent("colin:atoms-changed", { detail: { title: title, claimed: claimed } }));
+      return claimed;
+    }
+    function has(title, steps) { return ensureFresh().items.some(function (it) { return it.id === idOf(title, steps); }); }
+    function list() { return ensureFresh().items; }
+    function setDone(i, done) {
+      var a = ensureFresh(); if (!a.items[i]) return;
+      a.items[i].done = done; save(a);
+      if (done) {
+        var total = (LSget("colinOS_totalActions", 0) || 0) + 1; LSset("colinOS_totalActions", total);
+        confettiBurst();
+      }
+      /* 全部完成 → 今日连胜 +1 */
+      if (a.items.length && a.items.every(function (it) { return it.done; })) dayCheckIn();
+      refreshStreakMini();
+    }
+    function removeAt(i) { var a = ensureFresh(); a.items.splice(i, 1); save(a); }
+    function resetToday() { save({ date: todayStr(), items: [] }); }
+    return {
+      toggle: toggle, has: has, list: list, setDone: setDone, removeAt: removeAt, resetToday: resetToday, load: load
+    };
+  })();
+  window.ColinAtoms = Atoms;
 
   /* ================= 数据 ================= */
   var DATA = { books: null, models: null, principles: null, pillars: null };
@@ -90,8 +193,12 @@
         '<img src="/colin-os/icons/icon-192.png" alt="Colin OS">' +
         '<div class="bt"><b>COLIN OS</b><em>15-MIN WISDOM</em></div>' +
       "</div>" +
-      '<div class="streak-mini" id="streak-mini" style="display:' + (streakCount() > 0 ? "flex" : "none") + '">' +
-        IC.flame + "<span>" + streakCount() + " 天</span></div>";
+      '<div class="h-actions">' +
+        '<div class="streak-mini" id="streak-mini" style="display:' + (streakCount() > 0 ? "flex" : "none") + '">' +
+          IC.flame + "<span>" + streakCount() + " 天</span></div>" +
+        '<button class="theme-toggle" id="theme-btn" aria-label="切换浅色/暗色主题">' + IC.sun + IC.moon + "</button>" +
+      "</div>";
+    $("#theme-btn").addEventListener("click", toggleTheme);
   }
   function refreshStreakMini() {
     var m = $("#streak-mini");
@@ -475,16 +582,7 @@
     }
 
     function checkIn() {
-      var st = LSget("colinOS_streak", { count: 0, last: null });
-      var t = todayStr();
-      if (st.last !== t) {
-        var y = addDaysStr(-1);
-        st.count = (st.last === y) ? (st.count || 0) + 1 : 1;
-        st.last = t;
-        LSset("colinOS_streak", st);
-        refreshStreakMini();
-        toast("打卡成功 · 已连续 " + st.count + " 天");
-      }
+      dayCheckIn();
     }
 
     /* ---------- 渲染 ---------- */
@@ -492,9 +590,75 @@
       var pane = $("#pane-cards");
       if (!pane.getAttribute("data-mounted")) {
         pane.setAttribute("data-mounted", "1");
-        pane.innerHTML = '<div id="fc-host"></div>';
+        pane.innerHTML = '<div id="atoms-host"></div><div id="fc-host"></div>';
       }
+      refreshAtoms();
       refresh();
+    }
+
+    /* 默认微行动：从今日间隔重复卡池派生（用户未领取时展示） */
+    function microActionsDefault() {
+      var q = todayQueue().slice();
+      var out = [];
+      q.forEach(function (c) {
+        var steps = (c.backActs || []).filter(Boolean);
+        if (steps.length) out.push({ title: c.person || c.frontSub || "微行动", steps: steps });
+      });
+      return out.slice(0, 3);
+    }
+
+    function refreshAtoms() {
+      var host = $("#atoms-host"); if (!host) return;
+      Atoms.load(); /* 触发隔天重置 */
+      var items = Atoms.list();
+      var html = '<div class="atoms-panel"><div class="atoms-head"><div class="ttl">' + IC.flame + '🔥 今日待办微行动</div>' +
+        '<div class="cnt" id="atoms-cnt"></div></div>';
+      if (items.length) {
+        html += items.map(function (it, i) {
+          return '<div class="atom-item' + (it.done ? " done" : "") + '">' +
+            '<div class="atom-check" data-check="' + i + '">' + IC.check + '</div>' +
+            '<div class="atom-body"><div class="at">' + esc(noEmoji(it.title)) + '</div>' +
+            (it.steps && it.steps.length ? '<div class="as">' + esc(it.steps.slice(0, 2).join(" · ")) + '</div>' : '') +
+            '</div><div class="atom-x" data-x="' + i + '">×</div></div>';
+        }).join("");
+      } else {
+        var defs = microActionsDefault();
+        if (defs.length) {
+          html += '<div class="atoms-empty">尚未领取 · 系统据间隔重复为你推荐 <b>' + defs.length + '</b> 条微行动：</div>';
+          html += defs.map(function (d, i) {
+            return '<div class="atom-item"><div class="atom-check" data-defclaim="' + i + '" style="cursor:pointer">' + IC.bolt + '</div>' +
+              '<div class="atom-body"><div class="at">' + esc(noEmoji(d.title)) + '</div>' +
+              (d.steps && d.steps.length ? '<div class="as">' + esc(d.steps.slice(0, 2).join(" · ")) + '</div>' : '') +
+              '</div></div>';
+          }).join("");
+        } else {
+          html += '<div class="atoms-empty">今日微行动清单空空如也 · 去<b>智库 / 诊所</b>领取一个 2 分钟微行动吧</div>';
+        }
+      }
+      html += '</div>';
+      host.innerHTML = html;
+      var cnt = $("#atoms-cnt");
+      if (cnt) cnt.textContent = items.length ? (items.filter(function (it) { return it.done; }).length + "/" + items.length + " 完成") : "";
+      $$("[data-check]", host).forEach(function (el) {
+        el.addEventListener("click", function () {
+          var i = Number(el.getAttribute("data-check"));
+          Atoms.setDone(i, !Atoms.list()[i].done);
+          refreshAtoms();
+        });
+      });
+      $$("[data-x]", host).forEach(function (el) {
+        el.addEventListener("click", function () {
+          Atoms.removeAt(Number(el.getAttribute("data-x")));
+          refreshAtoms();
+        });
+      });
+      $$("[data-defclaim]", host).forEach(function (el) {
+        el.addEventListener("click", function () {
+          var d = microActionsDefault()[Number(el.getAttribute("data-defclaim"))];
+          if (d) window.ColinAtoms.toggle(d.title, d.steps);
+          refreshAtoms();
+        });
+      });
     }
 
     function refresh() {
@@ -551,7 +715,8 @@
                   '<div class="fb-txt">' + esc(c.backLogic) + "</div>" +
                   (c.backActs && c.backActs.length ?
                     '<div class="fb-acts"><div class="fb-title" style="margin-top:12px">微行动清单</div><ul>' +
-                    c.backActs.map(function (a) { return "<li>" + esc(a) + "</li>"; }).join("") + "</ul></div>" : "") +
+                    c.backActs.map(function (a) { return "<li>" + esc(a) + "</li>"; }).join("") + "</ul>" +
+                    '<button class="claim-btn" id="fc-claim">' + IC.bolt + '⚡ 领取代办：开启 2 分钟微行动</button></div>' : "") +
                 "</div>" +
                 '<div class="fhint">左右滑动切换卡片</div>' +
               "</div>" +
@@ -572,6 +737,20 @@
         answer(c.id, false);
         nextCard();
       });
+      var fcb = $("#fc-claim");
+      if (fcb) {
+        var syncClaim = function () {
+          var claimed = Atoms.has(c.person, c.backActs || []);
+          fcb.classList.toggle("claimed", claimed);
+          fcb.innerHTML = (claimed ? IC.check + "已领取（点击可取消）" : IC.bolt + "⚡ 领取代办：开启 2 分钟微行动");
+        };
+        syncClaim();
+        fcb.addEventListener("click", function (e) {
+          e.stopPropagation();
+          window.ColinAtoms.toggle(c.person, c.backActs || []);
+          syncClaim();
+        });
+      }
     }
 
     function nextCard() {
@@ -644,11 +823,19 @@
         '<div class="streak-big">' + IC.flame + "<b>" + streak + "</b><span>天连续打卡</span></div>" +
       "</div>" +
       '<div class="stat-row">' +
-        '<div class="stat-box"><b>' + streak + "</b><span>打卡天数</span></div>" +
-        '<div class="stat-box"><b>' + learned + "</b><span>已记卡片</span></div>" +
-        '<div class="stat-box"><b>' + ((DATA.books.books || []).length) + "</b><span>速读书单</span></div>" +
+        '<div class="stat-box"><b>' + streak + "</b><span>连续打卡</span></div>" +
+        '<div class="stat-box"><b>' + (LSget("colinOS_totalActions", 0) || 0) + "</b><span>累计践行</span></div>" +
+        '<div class="stat-box"><b>' + learned + "</b><span>研读模型</span></div>" +
+      "</div>" +
+      '<div class="os-actions">' +
+        '<button id="os-reset">重置今日任务</button>' +
+        '<button id="os-share">分享成果</button>' +
       "</div>" +
       '<div class="os-list">' +
+        '<div class="os-li tap" id="os-theme">' +
+          '<span class="ic">' + IC.sun + IC.moon + "</span>" +
+          '<span class="tx"><b>☀️/🌙 主题</b><span>浅色书卷 / 暗黑金 一键切换</span></span>' +
+          '<span class="arr">' + IC.right + "</span></div>" +
         '<div class="os-li" id="os-cards">' +
           '<span class="ic">' + IC.cards + "</span>" +
           '<span class="tx"><b>今日闪卡</b><span>每日 3 张 · 间隔重复回访</span></span>' +
@@ -674,6 +861,19 @@
     $("#os-cards").addEventListener("click", function () { setTab("cards"); });
     $("#os-tier").addEventListener("click", function () { setTab("clinic"); });
     $("#os-lib").addEventListener("click", function () { setTab("library"); });
+    $("#os-theme").addEventListener("click", toggleTheme);
+    var osReset = $("#os-reset");
+    if (osReset) osReset.addEventListener("click", function () {
+      Atoms.resetToday();
+      if (state.tab === "cards") Cards.refreshAtoms();
+      toast("今日微行动已重置");
+    });
+    var osShare = $("#os-share");
+    if (osShare) osShare.addEventListener("click", function () {
+      var msg = "Colin OS · 连续打卡 " + streak + " 天 · 累计践行 " + (LSget("colinOS_totalActions", 0) || 0) + " 个微行动";
+      if (navigator.share) { navigator.share({ title: "Colin OS", text: msg }).catch(function () {}); }
+      else { try { if (navigator.clipboard) navigator.clipboard.writeText(msg); } catch (e) {} toast("已复制成就：" + msg); }
+    });
     $("#os-join").addEventListener("click", function () {
       openSheet(
         '<h2 class="stitle">私域进群</h2><div class="ssub">高手的密度，决定你的天花板</div>' +
@@ -911,6 +1111,17 @@
     renderTabbar();
     initInstall();
     initOffline();
+
+    /* Atoms 跨组件变更：Toast + 刷新面板 */
+    window.addEventListener("colin:atoms-changed", function (e) {
+      var d = e.detail || {};
+      if (!d.silent) {
+        if (d.claimed) toast("已将【" + noEmoji(d.title) + "】微行动加入今日 Atoms 习惯清单！");
+        else toast("已取消【" + noEmoji(d.title) + "】微行动");
+      }
+      if (state.tab === "cards") Cards.refreshAtoms();
+      if (state.tab === "os") renderOSPane();
+    });
 
     /* 初始路由：?tab= 或 #tab */
     var t = new URLSearchParams(location.search).get("tab") || (location.hash || "").replace("#", "");

@@ -7,7 +7,18 @@
 <meta name="description" content="Colin OS — 35 本精选图书 15 分钟速读 · 200 跨学科思维模型 · 186 领袖原则间隔重复闪卡。像原生 App 一样的微学习体验。">
 <!-- PWA -->
 <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#0B0B0F">
+<meta name="theme-color" content="#F9F8F6">
+<script>
+  /* 主题防闪烁：在首屏渲染前确定浅/暗，避免白屏闪黑 */
+  (function () {
+    try {
+      var saved = localStorage.getItem("colinOS_theme");
+      var dark = saved ? saved === "dark"
+        : window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.add(dark ? "dark-theme" : "light-theme");
+    } catch (e) { document.documentElement.classList.add("light-theme"); }
+  })();
+</script>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">

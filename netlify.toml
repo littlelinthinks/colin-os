@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/sw.js"
+  to = "/sw.js"
+  status = 200
