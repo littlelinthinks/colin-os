@@ -177,7 +177,7 @@
   /* ================= 应用状态 ================= */
   var state = {
     tab: "library",
-    lib: { q: "", cat: "" },
+    lib: { q: "", cat: "", open: null },
     panesRendered: {},
     install: { deferred: null, dismissed: LSget("colinOS_installDismissed", 0) }
   };
@@ -244,21 +244,29 @@
   }
 
   /* ================= 模块：智库 Library ================= */
+  /* 折叠分组状态：localStorage 持久化；首次使用默认展开第一个分类 */
+  function libOpen() {
+    if (!state.lib.open) {
+      var saved = LSget("colinOS_libOpen", null);
+      if (saved && typeof saved === "object") { state.lib.open = saved; }
+      else {
+        state.lib.open = {};
+        var books = DATA.books.books || [];
+        if (books.length) { var first = noEmoji(books[0].category); if (first) state.lib.open[first] = true; }
+      }
+    }
+    return state.lib.open;
+  }
+
   function renderLibrary() {
     var pane = $("#pane-library");
     var books = DATA.books.books || [];
     var pillars = DATA.pillars.essays || [];
-    var cats = [];
-    books.forEach(function (b) { var c = noEmoji(b.category); if (c && cats.indexOf(c) === -1) cats.push(c); });
 
     pane.innerHTML =
       '<div class="view-head"><h1>Colin <span>智库</span></h1>' +
-        "<p>35 本精选图书 · 15 分钟速读拆解 · 4 大基石专栏</p></div>" +
+        "<p>" + books.length + " 本精选图书 · 15 分钟速读拆解 · 4 大基石专栏</p></div>" +
       '<div class="searchbar"><input id="lib-q" type="text" placeholder="搜索书名 / 作者 / 关键词…" value="' + esc(state.lib.q) + '">' + IC.search.replace("<svg", '<svg class="sicon"') + "</div>" +
-      '<div class="chiprow" id="lib-cats">' +
-        '<button class="chip' + (state.lib.cat === "" ? " on" : "") + '" data-cat="">全部</button>' +
-        cats.map(function (c) { return '<button class="chip' + (state.lib.cat === c ? " on" : "") + '" data-cat="' + esc(c) + '">' + esc(c) + "</button>"; }).join("") +
-      "</div>" +
       '<div id="lib-books"></div>' +
       '<div class="sec-row"><h2>四大基石<i>专栏</i></h2><span>' + pillars.length + " 个体系</span></div>" +
       '<div class="grid-auto" id="lib-pillars">' +
@@ -274,12 +282,32 @@
 
     var qEl = $("#lib-q", pane);
     qEl.addEventListener("input", function () { state.lib.q = qEl.value; drawBooks(); });
-    $$("#lib-cats .chip", pane).forEach(function (c) {
-      c.addEventListener("click", function () {
-        state.lib.cat = c.getAttribute("data-cat");
-        $$("#lib-cats .chip", pane).forEach(function (x) { x.classList.toggle("on", x === c); });
+    /* 事件委托：折叠头 / 全部展开收起 / 图书卡（body 重渲染无需重绑） */
+    $("#lib-books", pane).addEventListener("click", function (e) {
+      var head = e.target.closest(".lib-sec-head");
+      if (head) {
+        var cat = head.getAttribute("data-cat");
+        var map = libOpen();
+        map[cat] = !map[cat];
+        LSset("colinOS_libOpen", map);
         drawBooks();
-      });
+        return;
+      }
+      var tgl = e.target.closest("[data-liball]");
+      if (tgl) {
+        var want = tgl.getAttribute("data-liball") === "1";
+        var om = libOpen(), cs = [];
+        (DATA.books.books || []).forEach(function (b) { var c = noEmoji(b.category); if (c && cs.indexOf(c) === -1) cs.push(c); });
+        cs.forEach(function (c) { om[c] = want; });
+        LSset("colinOS_libOpen", om);
+        drawBooks();
+        return;
+      }
+      var card = e.target.closest("[data-book]");
+      if (card) {
+        if (e.target.closest("[data-listen]")) return;
+        openBook(Number(card.getAttribute("data-book")));
+      }
     });
     $$("[data-pillar]", pane).forEach(function (el) {
       el.addEventListener("click", function () { openPillar(Number(el.getAttribute("data-pillar"))); });
@@ -287,39 +315,60 @@
     drawBooks();
   }
 
+  function bookCard(b) {
+    return '<div class="cardx tap" data-book="' + b.id + '">' +
+      '<span class="cat">' + esc(noEmoji(b.category)) + "</span>" +
+      "<h3>" + esc(noEmoji(b.title)) + '<span class="en">' + esc(b.en_title || "") + "</span></h3>" +
+      '<div class="desc">' + esc(b.summary || "") + "</div>" +
+      '<div class="meta"><span>文 / ' + esc(noEmoji(b.author || "")) + "</span>" +
+        '<span class="go" data-listen="' + b.id + '">' + "15 分钟速读 →</span></div>" +
+    "</div>";
+  }
+
   function drawBooks() {
     var host = $("#lib-books"); if (!host) return;
     var q = state.lib.q.trim().toLowerCase();
-    var cat = state.lib.cat;
-    var list = (DATA.books.books || []).filter(function (b) {
-      if (cat && noEmoji(b.category) !== cat) return false;
-      if (q) {
-        var hay = (b.title + " " + (b.en_title || "") + " " + (b.author || "") + " " + (b.summary || "") + " " + (b.models_linked || []).join(" ")).toLowerCase();
-        if (hay.indexOf(q) === -1) return false;
+    var all = DATA.books.books || [];
+    var match = function (b) {
+      if (!q) return true;
+      var hay = (b.title + " " + (b.en_title || "") + " " + (b.author || "") + " " + (b.summary || "") + " " + (b.models_linked || []).join(" ")).toLowerCase();
+      return hay.indexOf(q) !== -1;
+    };
+
+    /* 搜索态：跨分类平铺结果 */
+    if (q) {
+      var list = all.filter(match);
+      if (!list.length) {
+        host.innerHTML = '<div class="cardx" style="text-align:center;color:var(--muted)">没有匹配的图书，换个关键词试试。</div>';
+        return;
       }
-      return true;
-    });
-    if (!list.length) {
-      host.innerHTML = '<div class="cardx" style="text-align:center;color:var(--muted)">没有匹配的图书，换个关键词试试。</div>';
+      host.innerHTML =
+        '<div class="sec-row"><h2>搜索<i>结果</i></h2><span>' + list.length + " 本</span></div>" +
+        '<div class="grid-auto">' + list.map(bookCard).join("") + "</div>";
       return;
     }
-    host.innerHTML =
-      '<div class="sec-row"><h2>精选<i>图书</i></h2><span>' + list.length + " 本 · 15 分钟/本</span></div>" +
-      '<div class="grid-auto">' + list.map(function (b) {
-        return '<div class="cardx tap" data-book="' + b.id + '">' +
-          '<span class="cat">' + esc(noEmoji(b.category)) + "</span>" +
-          "<h3>" + esc(noEmoji(b.title)) + '<span class="en">' + esc(b.en_title || "") + "</span></h3>" +
-          '<div class="desc">' + esc(b.summary || "") + "</div>" +
-          '<div class="meta"><span>文 / ' + esc(noEmoji(b.author || "")) + "</span>" +
-            '<span class="go" data-listen="' + b.id + '">' + "15 分钟速读 →</span></div>" +
-        "</div>";
-      }).join("") + "</div>";
-    $$("[data-book]", host).forEach(function (el) {
-      el.addEventListener("click", function (e) {
-        if (e.target.closest("[data-listen]")) return;
-        openBook(Number(el.getAttribute("data-book")));
-      });
-    });
+
+    /* 默认态：按分类折叠分组（收起的组不渲染卡片，1000 本也不卡） */
+    var cats = [];
+    all.forEach(function (b) { var c = noEmoji(b.category); if (c && cats.indexOf(c) === -1) cats.push(c); });
+    var openMap = libOpen();
+    var anyOpen = cats.some(function (c) { return openMap[c]; });
+    var html = '<div class="sec-row"><h2>精选<i>图书</i></h2><span style="display:flex;align-items:center;gap:8px">' +
+      "<span>" + all.length + " 本 · 15 分钟/本</span>" +
+      '<button class="lib-toggle" data-liball="' + (anyOpen ? "0" : "1") + '">' + (anyOpen ? "收起全部" : "展开全部") + "</button></span></div>";
+    html += cats.map(function (c) {
+      var items = all.filter(function (b) { return noEmoji(b.category) === c; });
+      var isOpen = !!openMap[c];
+      return '<section class="lib-sec' + (isOpen ? " open" : "") + '" data-sec="' + esc(c) + '">' +
+        '<div class="lib-sec-head" data-cat="' + esc(c) + '">' +
+          '<span class="nm">' + esc(c) + "</span>" +
+          '<span class="cnt">' + items.length + " 本</span>" +
+          '<span class="chev">▾</span>' +
+        "</div>" +
+        '<div class="lib-sec-body">' + (isOpen ? '<div class="grid-auto">' + items.map(bookCard).join("") + "</div>" : "") + "</div>" +
+      "</section>";
+    }).join("");
+    host.innerHTML = html;
   }
 
   /* ---------- 图书详情：15 分钟 / 完整 双视图 ---------- */

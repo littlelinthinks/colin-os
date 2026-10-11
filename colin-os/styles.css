@@ -232,6 +232,18 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .sec-row h2 i { font-style: normal; color: var(--accent-gold); }
 .sec-row span { font-size: 11.5px; color: var(--text-tertiary); }
 
+/* ============ 智库 · 图书折叠分组（手风琴） ============ */
+.lib-sec { border: 1px solid var(--line); border-radius: 16px; background: var(--card-bg); margin-bottom: 10px; overflow: hidden; }
+.lib-sec-head { display: flex; align-items: center; gap: 10px; padding: 14px 16px; cursor: pointer; user-select: none; transition: background 0.15s; }
+.lib-sec-head:hover { background: var(--surface-2); }
+.lib-sec-head .nm { flex: 1; font-family: var(--serif); font-size: 15.5px; font-weight: 700; color: var(--text-primary); }
+.lib-sec-head .cnt { flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--accent-gold); background: var(--gold-dim); border: 1px solid var(--gold-line); border-radius: 999px; padding: 2px 10px; }
+.lib-sec-head .chev { flex-shrink: 0; font-size: 12px; color: var(--text-tertiary); transition: transform 0.2s ease; }
+.lib-sec.open .chev { transform: rotate(180deg); color: var(--accent-gold); }
+.lib-sec-body { padding: 2px 12px 14px; }
+.lib-sec:not(.open) .lib-sec-body { display: none; }
+.lib-toggle { font-family: inherit; font-size: 12px; font-weight: 700; color: var(--accent-gold); background: none; border: none; padding: 0; cursor: pointer; }
+
 /* ============ 搜索 / 筛选 ============ */
 .searchbar { position: relative; margin-bottom: 12px; }
 .searchbar input {
