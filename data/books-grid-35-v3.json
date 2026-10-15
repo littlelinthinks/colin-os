@@ -37,7 +37,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/55372984-strictly-business",
     "douban": "https://book.douban.com/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 2,
@@ -57,7 +58,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com",
     "douban": "https://book.douban.com/subject/38392258/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 3,
@@ -77,7 +79,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/11084145-steve-jobs",
     "douban": "https://book.douban.com/subject/6798611/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 4,
@@ -96,7 +99,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com",
     "douban": "https://book.douban.com/subject/35384639/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 5,
@@ -115,7 +119,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/25541015-elon-musk",
     "douban": "https://book.douban.com/subject/26745943/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 6,
@@ -134,7 +139,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com",
     "douban": "https://book.douban.com/subject/35191060/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 7,
@@ -153,7 +159,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/38728977-the-molecule-of-more",
     "douban": "https://book.douban.com/subject/35532588/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 8,
@@ -172,7 +179,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/66354.Flow",
     "douban": "https://book.douban.com/subject/27186106/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 9,
@@ -190,7 +198,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/35639695/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 10,
@@ -209,7 +218,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/109312.A_Whole_New_Mind",
     "douban": "https://book.douban.com/subject/2042548/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 11,
@@ -228,7 +238,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/17333336-scarcity",
     "douban": "https://book.douban.com/subject/25959166/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 12,
@@ -247,7 +258,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/679728.The_Crowd",
     "douban": "https://book.douban.com/subject/1012611/"
-   }
+   },
+   "priority": 1
   },
   {
    "id": 13,
@@ -266,7 +278,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/41558238-the-great-mental-models",
     "douban": "https://book.douban.com/subject/35360661/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 14,
@@ -285,7 +298,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow",
     "douban": "https://book.douban.com/subject/10785583/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 15,
@@ -304,7 +318,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/10245602-poor-economics",
     "douban": "https://book.douban.com/subject/20470359/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 16,
@@ -323,7 +338,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/34361530-principles",
     "douban": "https://book.douban.com/subject/27608239/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 17,
@@ -343,7 +359,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/93980.Poor_Charlie_s_Almanack",
     "douban": "https://book.douban.com/subject/2164410/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 18,
@@ -361,7 +378,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/36142750/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 19,
@@ -380,7 +398,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/219985.The_Minto_Pyramid_Principle",
     "douban": "https://book.douban.com/subject/1020644/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 20,
@@ -398,7 +417,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/36404314/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 21,
@@ -417,7 +437,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/53404289-fundamentals",
     "douban": "https://book.douban.com/subject/35688537/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 22,
@@ -436,7 +457,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/402843.Zen_Mind_Beginner_s_Mind",
     "douban": "https://book.douban.com/subject/4815456/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 23,
@@ -454,7 +476,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/30366405/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 24,
@@ -472,7 +495,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/24719263/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 25,
@@ -490,7 +514,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/35212595/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 26,
@@ -508,7 +533,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/35300057/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 27,
@@ -526,7 +552,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/14266507/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 28,
@@ -544,7 +571,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/1077747/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 29,
@@ -562,7 +590,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/24700085/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 30,
@@ -581,7 +610,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/1309838/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 31,
@@ -600,7 +630,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/80000.Strait_Is_the_Gate",
     "douban": "https://book.douban.com/subject/1079361/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 32,
@@ -619,7 +650,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/4981.Slaughterhouse_Five",
     "douban": "https://book.douban.com/subject/1043922/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 33,
@@ -638,7 +670,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/1721014.Life_and_Death_Are_Wearing_Me_Out",
     "douban": "https://book.douban.com/subject/1932370/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 34,
@@ -657,7 +690,8 @@
    "links": {
     "goodreads": "https://www.goodreads.com/book/show/18776605-the-right-bank-of-the-erguna-river",
     "douban": "https://book.douban.com/subject/1480112/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 35,
@@ -675,7 +709,8 @@
    ],
    "links": {
     "douban": "https://book.douban.com/subject/33413982/"
-   }
+   },
+   "priority": 2
   },
   {
    "id": 36,
@@ -686,7 +721,8 @@
    "summary": "电子书资源 · MOBI · 35.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 37,
@@ -697,7 +733,8 @@
    "summary": "电子书资源 · PDF · 25.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 38,
@@ -708,7 +745,8 @@
    "summary": "电子书资源 · EPUB · 20.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 39,
@@ -719,7 +757,8 @@
    "summary": "电子书资源 · PDF · 15.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 40,
@@ -730,7 +769,8 @@
    "summary": "电子书资源 · EPUB · 10.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 41,
@@ -741,7 +781,8 @@
    "summary": "电子书资源 · EPUB · 7.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 42,
@@ -752,7 +793,8 @@
    "summary": "电子书资源 · MOBI · 6.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 43,
@@ -763,7 +805,8 @@
    "summary": "电子书资源 · PDF · 4.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 44,
@@ -774,7 +817,8 @@
    "summary": "电子书资源 · PDF · 4.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 45,
@@ -785,7 +829,8 @@
    "summary": "电子书资源 · PDF · 4.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 46,
@@ -796,7 +841,8 @@
    "summary": "电子书资源 · EPUB · 4.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 47,
@@ -807,7 +853,8 @@
    "summary": "电子书资源 · PDF · 3.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 48,
@@ -818,7 +865,8 @@
    "summary": "电子书资源 · PDF · 2.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 49,
@@ -829,7 +877,8 @@
    "summary": "电子书资源 · EPUB · 2.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 50,
@@ -840,7 +889,8 @@
    "summary": "电子书资源 · PDF · 1.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 51,
@@ -851,7 +901,8 @@
    "summary": "电子书资源 · MOBI · 0.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 52,
@@ -862,7 +913,8 @@
    "summary": "电子书资源 · MOBI · 0.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 53,
@@ -873,7 +925,8 @@
    "summary": "电子书资源 · EPUB · 0.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 54,
@@ -884,7 +937,8 @@
    "summary": "电子书资源 · PDF · 23.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 55,
@@ -895,7 +949,8 @@
    "summary": "电子书资源 · EPUB · 10.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 56,
@@ -906,7 +961,8 @@
    "summary": "电子书资源 · EPUB · 4.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 57,
@@ -917,7 +973,8 @@
    "summary": "电子书资源 · EPUB · 4.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 58,
@@ -928,7 +985,8 @@
    "summary": "电子书资源 · EPUB · 3.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 59,
@@ -939,7 +997,8 @@
    "summary": "电子书资源 · PDF · 3.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 60,
@@ -950,7 +1009,8 @@
    "summary": "电子书资源 · EPUB · 2.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 61,
@@ -961,7 +1021,8 @@
    "summary": "电子书资源 · EPUB · 1.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 62,
@@ -972,7 +1033,8 @@
    "summary": "电子书资源 · EPUB · 38.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 63,
@@ -983,7 +1045,8 @@
    "summary": "电子书资源 · EPUB · 5.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 64,
@@ -994,7 +1057,8 @@
    "summary": "电子书资源 · EPUB · 0.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 65,
@@ -1005,7 +1069,8 @@
    "summary": "电子书资源 · EPUB · 0.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 66,
@@ -1016,7 +1081,8 @@
    "summary": "电子书资源 · EPUB · 0.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 67,
@@ -1027,7 +1093,8 @@
    "summary": "电子书资源 · EPUB · 0.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 68,
@@ -1038,7 +1105,8 @@
    "summary": "电子书资源 · EPUB · 0.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 69,
@@ -1049,7 +1117,8 @@
    "summary": "电子书资源 · EPUB · 1.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 70,
@@ -1060,7 +1129,8 @@
    "summary": "电子书资源 · PDF · 1.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 71,
@@ -1071,7 +1141,8 @@
    "summary": "电子书资源 · EPUB · 0.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 72,
@@ -1082,7 +1153,8 @@
    "summary": "电子书资源 · EPUB · 0.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 73,
@@ -1093,7 +1165,8 @@
    "summary": "电子书资源 · EPUB · 0.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 74,
@@ -1104,7 +1177,8 @@
    "summary": "电子书资源 · EPUB · 0.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 75,
@@ -1115,7 +1189,8 @@
    "summary": "电子书资源 · PDF · 86.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 76,
@@ -1126,7 +1201,8 @@
    "summary": "电子书资源 · PDF · 86.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 77,
@@ -1137,7 +1213,8 @@
    "summary": "电子书资源 · PDF · 69.7MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 78,
@@ -1148,7 +1225,8 @@
    "summary": "电子书资源 · EPUB · 57.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 79,
@@ -1159,7 +1237,8 @@
    "summary": "电子书资源 · PDF · 53.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 80,
@@ -1170,7 +1249,8 @@
    "summary": "电子书资源 · PDF · 36.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 81,
@@ -1181,7 +1261,8 @@
    "summary": "电子书资源 · PDF · 34.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 82,
@@ -1192,7 +1273,8 @@
    "summary": "电子书资源 · PDF · 33.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 83,
@@ -1203,7 +1285,8 @@
    "summary": "电子书资源 · PDF · 30.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 84,
@@ -1214,7 +1297,8 @@
    "summary": "电子书资源 · PDF · 25.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 85,
@@ -1225,7 +1309,8 @@
    "summary": "电子书资源 · PDF · 19.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 86,
@@ -1236,7 +1321,8 @@
    "summary": "电子书资源 · EPUB · 18.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 87,
@@ -1247,7 +1333,8 @@
    "summary": "电子书资源 · PDF · 14.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 88,
@@ -1258,7 +1345,8 @@
    "summary": "电子书资源 · PDF · 13.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 89,
@@ -1269,7 +1357,8 @@
    "summary": "电子书资源 · EPUB · 13.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 90,
@@ -1280,7 +1369,8 @@
    "summary": "电子书资源 · EPUB · 11.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 91,
@@ -1291,7 +1381,8 @@
    "summary": "电子书资源 · PDF · 11.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 92,
@@ -1302,7 +1393,8 @@
    "summary": "电子书资源 · PDF · 11.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 93,
@@ -1313,7 +1405,8 @@
    "summary": "电子书资源 · PDF · 8.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 94,
@@ -1324,7 +1417,8 @@
    "summary": "电子书资源 · PDF · 8.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 95,
@@ -1335,7 +1429,8 @@
    "summary": "电子书资源 · PDF · 7.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 96,
@@ -1346,7 +1441,8 @@
    "summary": "电子书资源 · PDF · 7.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 97,
@@ -1357,7 +1453,8 @@
    "summary": "电子书资源 · EPUB · 7.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 98,
@@ -1368,7 +1465,8 @@
    "summary": "电子书资源 · EPUB · 5.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 99,
@@ -1379,7 +1477,8 @@
    "summary": "电子书资源 · PDF · 5.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 100,
@@ -1390,7 +1489,8 @@
    "summary": "电子书资源 · PDF · 4.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 101,
@@ -1401,7 +1501,8 @@
    "summary": "电子书资源 · PDF · 3.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 102,
@@ -1412,7 +1513,8 @@
    "summary": "电子书资源 · PDF · 2.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 103,
@@ -1423,7 +1525,8 @@
    "summary": "电子书资源 · PDF · 2.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 104,
@@ -1434,7 +1537,8 @@
    "summary": "电子书资源 · MOBI · 2.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 105,
@@ -1445,7 +1549,8 @@
    "summary": "电子书资源 · PDF · 2.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 106,
@@ -1456,7 +1561,8 @@
    "summary": "电子书资源 · PDF · 1.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 107,
@@ -1467,7 +1573,8 @@
    "summary": "电子书资源 · MOBI · 1.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 108,
@@ -1478,7 +1585,8 @@
    "summary": "电子书资源 · EPUB · 1.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 109,
@@ -1489,7 +1597,8 @@
    "summary": "电子书资源 · MOBI · 0.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 110,
@@ -1500,7 +1609,8 @@
    "summary": "电子书资源 · EPUB · 0.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 111,
@@ -1511,7 +1621,8 @@
    "summary": "电子书资源 · PDF · 73.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 112,
@@ -1522,7 +1633,8 @@
    "summary": "电子书资源 · MOBI · 52.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 113,
@@ -1533,7 +1645,8 @@
    "summary": "电子书资源 · EPUB · 29.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 114,
@@ -1544,7 +1657,8 @@
    "summary": "电子书资源 · PDF · 28.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 115,
@@ -1555,7 +1669,8 @@
    "summary": "电子书资源 · MOBI · 21.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 116,
@@ -1566,7 +1681,8 @@
    "summary": "电子书资源 · MOBI · 18.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 117,
@@ -1577,7 +1693,8 @@
    "summary": "电子书资源 · MOBI · 16.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 118,
@@ -1588,7 +1705,8 @@
    "summary": "电子书资源 · PDF · 13.7MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 119,
@@ -1599,7 +1717,8 @@
    "summary": "电子书资源 · PDF · 12.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 120,
@@ -1610,7 +1729,8 @@
    "summary": "电子书资源 · EPUB · 12.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 121,
@@ -1621,7 +1741,8 @@
    "summary": "电子书资源 · PDF · 7.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 122,
@@ -1632,7 +1753,8 @@
    "summary": "电子书资源 · MOBI · 5.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 123,
@@ -1643,7 +1765,8 @@
    "summary": "电子书资源 · MOBI · 5.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 124,
@@ -1654,7 +1777,8 @@
    "summary": "电子书资源 · EPUB · 3.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 125,
@@ -1665,7 +1789,8 @@
    "summary": "电子书资源 · EPUB · 3.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 126,
@@ -1676,7 +1801,8 @@
    "summary": "电子书资源 · PDF · 2.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 127,
@@ -1687,7 +1813,8 @@
    "summary": "电子书资源 · MOBI · 2.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 128,
@@ -1698,7 +1825,8 @@
    "summary": "电子书资源 · PDF · 2.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 129,
@@ -1709,7 +1837,8 @@
    "summary": "电子书资源 · EPUB · 2.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 130,
@@ -1720,7 +1849,8 @@
    "summary": "电子书资源 · EPUB · 2.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 131,
@@ -1731,7 +1861,8 @@
    "summary": "电子书资源 · EPUB · 2.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 132,
@@ -1742,7 +1873,8 @@
    "summary": "电子书资源 · PDF · 1.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 133,
@@ -1753,7 +1885,8 @@
    "summary": "电子书资源 · PDF · 1.7MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 134,
@@ -1764,7 +1897,8 @@
    "summary": "电子书资源 · PDF · 1.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 135,
@@ -1775,7 +1909,8 @@
    "summary": "电子书资源 · MOBI · 1.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 136,
@@ -1786,7 +1921,8 @@
    "summary": "电子书资源 · MOBI · 1.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 137,
@@ -1797,7 +1933,8 @@
    "summary": "电子书资源 · MOBI · 1.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 138,
@@ -1808,7 +1945,8 @@
    "summary": "电子书资源 · MOBI · 0.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 139,
@@ -1819,7 +1957,8 @@
    "summary": "电子书资源 · EPUB · 0.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 140,
@@ -1830,7 +1969,8 @@
    "summary": "电子书资源 · MOBI · 0.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 141,
@@ -1841,7 +1981,8 @@
    "summary": "电子书资源 · MOBI · 0.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 142,
@@ -1852,7 +1993,8 @@
    "summary": "电子书资源 · MOBI · 0.7MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 143,
@@ -1863,7 +2005,8 @@
    "summary": "电子书资源 · MOBI · 0.7MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 144,
@@ -1874,7 +2017,8 @@
    "summary": "电子书资源 · MOBI · 0.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 145,
@@ -1885,7 +2029,8 @@
    "summary": "电子书资源 · EPUB · 0.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 146,
@@ -1896,7 +2041,8 @@
    "summary": "电子书资源 · MOBI · 0.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 147,
@@ -1907,7 +2053,8 @@
    "summary": "电子书资源 · EPUB · 0.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 148,
@@ -1918,7 +2065,8 @@
    "summary": "电子书资源 · EPUB · 0.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 149,
@@ -1929,7 +2077,8 @@
    "summary": "电子书资源 · EPUB · 0.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 150,
@@ -1940,7 +2089,8 @@
    "summary": "电子书资源 · MOBI · 0.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 151,
@@ -1951,7 +2101,8 @@
    "summary": "电子书资源 · EPUB · 0.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 152,
@@ -1962,7 +2113,8 @@
    "summary": "电子书资源 · EPUB · 0.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 153,
@@ -1973,7 +2125,8 @@
    "summary": "电子书资源 · MOBI · 25.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 154,
@@ -1984,7 +2137,8 @@
    "summary": "电子书资源 · PDF · 14.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 155,
@@ -1995,7 +2149,8 @@
    "summary": "电子书资源 · EPUB · 9.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 156,
@@ -2006,7 +2161,8 @@
    "summary": "电子书资源 · MOBI · 9.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 157,
@@ -2017,7 +2173,8 @@
    "summary": "电子书资源 · PDF · 9.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 158,
@@ -2028,7 +2185,8 @@
    "summary": "电子书资源 · MOBI · 8.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 159,
@@ -2039,7 +2197,8 @@
    "summary": "电子书资源 · MOBI · 4.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 160,
@@ -2050,7 +2209,8 @@
    "summary": "电子书资源 · PDF · 3.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 161,
@@ -2061,7 +2221,8 @@
    "summary": "电子书资源 · PDF · 2.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 162,
@@ -2072,7 +2233,8 @@
    "summary": "电子书资源 · MOBI · 2.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 163,
@@ -2083,7 +2245,8 @@
    "summary": "电子书资源 · MOBI · 2.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 164,
@@ -2094,7 +2257,8 @@
    "summary": "电子书资源 · EPUB · 2.7MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 165,
@@ -2105,7 +2269,8 @@
    "summary": "电子书资源 · MOBI · 2.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 166,
@@ -2116,7 +2281,8 @@
    "summary": "电子书资源 · EPUB · 2.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 167,
@@ -2127,7 +2293,8 @@
    "summary": "电子书资源 · MOBI · 2.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 168,
@@ -2138,7 +2305,8 @@
    "summary": "电子书资源 · MOBI · 1.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 169,
@@ -2149,7 +2317,8 @@
    "summary": "电子书资源 · PDF · 1.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 170,
@@ -2160,7 +2329,8 @@
    "summary": "电子书资源 · PDF · 1.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 171,
@@ -2171,7 +2341,8 @@
    "summary": "电子书资源 · MOBI · 1.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 172,
@@ -2182,7 +2353,8 @@
    "summary": "电子书资源 · MOBI · 1.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 173,
@@ -2193,7 +2365,8 @@
    "summary": "电子书资源 · EPUB · 0.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 174,
@@ -2204,7 +2377,8 @@
    "summary": "电子书资源 · EPUB · 0.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 175,
@@ -2215,7 +2389,8 @@
    "summary": "电子书资源 · MOBI · 0.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 176,
@@ -2226,7 +2401,8 @@
    "summary": "电子书资源 · MOBI · 10.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 177,
@@ -2237,7 +2413,8 @@
    "summary": "电子书资源 · MOBI · 6.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 178,
@@ -2248,7 +2425,8 @@
    "summary": "电子书资源 · MOBI · 2.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 179,
@@ -2259,7 +2437,8 @@
    "summary": "电子书资源 · MOBI · 2.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 180,
@@ -2270,7 +2449,8 @@
    "summary": "电子书资源 · PDF · 2.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 181,
@@ -2281,7 +2461,8 @@
    "summary": "电子书资源 · EPUB · 1.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 182,
@@ -2292,7 +2473,8 @@
    "summary": "电子书资源 · MOBI · 1.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 183,
@@ -2303,7 +2485,8 @@
    "summary": "电子书资源 · MOBI · 1.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 184,
@@ -2314,7 +2497,8 @@
    "summary": "电子书资源 · MOBI · 1.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 185,
@@ -2325,7 +2509,8 @@
    "summary": "电子书资源 · MOBI · 1.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 186,
@@ -2336,7 +2521,8 @@
    "summary": "电子书资源 · MOBI · 1.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 187,
@@ -2347,7 +2533,8 @@
    "summary": "电子书资源 · MOBI · 1.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 188,
@@ -2358,7 +2545,8 @@
    "summary": "电子书资源 · MOBI · 0.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 189,
@@ -2369,7 +2557,8 @@
    "summary": "电子书资源 · MOBI · 0.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 190,
@@ -2380,7 +2569,8 @@
    "summary": "电子书资源 · MOBI · 1.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 191,
@@ -2391,7 +2581,8 @@
    "summary": "电子书资源 · EPUB · 0.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 192,
@@ -2402,7 +2593,8 @@
    "summary": "电子书资源 · PDF · 315.7MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 193,
@@ -2413,7 +2605,8 @@
    "summary": "电子书资源 · PDF · 65.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 194,
@@ -2424,7 +2617,8 @@
    "summary": "电子书资源 · PDF · 62.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 195,
@@ -2435,7 +2629,8 @@
    "summary": "电子书资源 · PDF · 60.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 196,
@@ -2446,7 +2641,8 @@
    "summary": "电子书资源 · PDF · 58.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 197,
@@ -2457,7 +2653,8 @@
    "summary": "电子书资源 · PDF · 54.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 198,
@@ -2468,7 +2665,8 @@
    "summary": "电子书资源 · PDF · 53.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 199,
@@ -2479,7 +2677,8 @@
    "summary": "电子书资源 · PDF · 47.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 200,
@@ -2490,7 +2689,8 @@
    "summary": "电子书资源 · PDF · 46.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 201,
@@ -2501,7 +2701,8 @@
    "summary": "电子书资源 · PDF · 27.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 202,
@@ -2512,7 +2713,8 @@
    "summary": "电子书资源 · PDF · 26.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 203,
@@ -2523,7 +2725,8 @@
    "summary": "电子书资源 · PDF · 20.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 204,
@@ -2534,7 +2737,8 @@
    "summary": "电子书资源 · PDF · 15.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 205,
@@ -2545,7 +2749,8 @@
    "summary": "电子书资源 · PDF · 14.8MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 206,
@@ -2556,7 +2761,8 @@
    "summary": "电子书资源 · MOBI · 7.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 207,
@@ -2567,7 +2773,8 @@
    "summary": "电子书资源 · MOBI · 5.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 208,
@@ -2578,7 +2785,8 @@
    "summary": "电子书资源 · MOBI · 5.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 209,
@@ -2589,7 +2797,8 @@
    "summary": "电子书资源 · PDF · 5.1MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 210,
@@ -2600,7 +2809,8 @@
    "summary": "电子书资源 · MOBI · 4.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 211,
@@ -2611,7 +2821,8 @@
    "summary": "电子书资源 · PDF · 4.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 212,
@@ -2622,7 +2833,8 @@
    "summary": "电子书资源 · PDF · 3.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 213,
@@ -2633,7 +2845,8 @@
    "summary": "电子书资源 · MOBI · 3.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 214,
@@ -2644,7 +2857,8 @@
    "summary": "电子书资源 · EPUB · 3.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 215,
@@ -2655,7 +2869,8 @@
    "summary": "电子书资源 · MOBI · 3.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 216,
@@ -2666,7 +2881,8 @@
    "summary": "电子书资源 · PDF · 2.6MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 217,
@@ -2677,7 +2893,8 @@
    "summary": "电子书资源 · MOBI · 2.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 218,
@@ -2688,7 +2905,8 @@
    "summary": "电子书资源 · PDF · 2.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 219,
@@ -2699,7 +2917,8 @@
    "summary": "电子书资源 · PDF · 1.9MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 220,
@@ -2710,7 +2929,8 @@
    "summary": "电子书资源 · PDF · 1.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 221,
@@ -2721,7 +2941,8 @@
    "summary": "电子书资源 · MOBI · 1.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 222,
@@ -2732,7 +2953,8 @@
    "summary": "电子书资源 · MOBI · 1.0MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 223,
@@ -2743,7 +2965,8 @@
    "summary": "电子书资源 · EPUB · 0.5MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 224,
@@ -2754,7 +2977,8 @@
    "summary": "电子书资源 · MOBI · 0.4MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 225,
@@ -2765,7 +2989,8 @@
    "summary": "电子书资源 · EPUB · 0.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 226,
@@ -2776,7 +3001,8 @@
    "summary": "电子书资源 · EPUB · 0.3MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 227,
@@ -2787,7 +3013,8 @@
    "summary": "电子书资源 · EPUB · 0.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   },
   {
    "id": 228,
@@ -2798,7 +3025,8 @@
    "summary": "电子书资源 · PDF · 0.2MB",
    "insights": [],
    "models_linked": [],
-   "links": {}
+   "links": {},
+   "priority": 3
   }
  ]
 }

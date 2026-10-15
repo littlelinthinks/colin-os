@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
 <title>Colin OS · 15 分钟微学习</title>
-<meta name="description" content="Colin OS — 35 本精选图书 15 分钟速读 · 200 跨学科思维模型 · 186 领袖原则间隔重复闪卡。像原生 App 一样的微学习体验。">
+<meta name="description" content="Colin OS — 228 本精选图书 15 分钟速读 · 200 跨学科思维模型 · 186 领袖原则间隔重复闪卡 · 知识库记录/日志/决策/复盘/图谱 · AI 助手。像原生 App 一样的微学习体验。">
 <!-- PWA -->
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#F9F8F6">
@@ -52,15 +52,24 @@
   <!-- 离线徽标 -->
   <div class="offline-pill" id="offline-pill">离线模式 · 已缓存内容可正常使用</div>
 
-  <!-- 主视图：四大 TabPane -->
+  <!-- 主视图：五大 TabPane -->
   <main class="os-view">
     <section class="tabpane" id="pane-library">
       <div class="boot"><div class="ring"></div>LOADING COLIN OS</div>
     </section>
     <section class="tabpane" id="pane-clinic" hidden></section>
     <section class="tabpane" id="pane-cards" hidden></section>
+    <section class="tabpane" id="pane-knowledge" hidden></section>
     <section class="tabpane" id="pane-os" hidden></section>
   </main>
+
+  <!-- 快速记录悬浮按钮 + 菜单 -->
+  <div class="fab-menu" id="fab-menu">
+    <button class="fab-mi" data-fab="note">记一条（想法/金句/问题/证据）</button>
+    <button class="fab-mi" data-fab="log">记阅读日志</button>
+    <button class="fab-mi" data-fab="decision">记一个决策</button>
+  </div>
+  <button class="fab" id="fab-capture" aria-label="快速记录">+</button>
 
   <!-- 详情弹层 -->
   <div class="sheet-mask" id="sheet-mask"></div>
